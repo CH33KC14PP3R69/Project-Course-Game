@@ -61,6 +61,7 @@ namespace Opsive.UltimateCharacterController.Traits
             EventHandler.RegisterEvent<float>(m_GameObject, "OnCharacterLand", OnCharacterLand);
         }
 
+
         /// <summary>
         /// Initialize the collider layers after the UltimateCharacterLocomotion has been initialized.
         /// </summary>

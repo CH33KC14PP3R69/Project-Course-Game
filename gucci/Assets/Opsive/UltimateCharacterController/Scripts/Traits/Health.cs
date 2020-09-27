@@ -20,6 +20,7 @@ namespace Opsive.UltimateCharacterController.Traits
     using Opsive.UltimateCharacterController.StateSystem;
     using Opsive.UltimateCharacterController.Utility;
     using System.Collections.Generic;
+    using System.Collections;
     using UnityEngine;
 
     /// <summary>
@@ -62,12 +63,14 @@ namespace Opsive.UltimateCharacterController.Traits
         [SerializeField] protected UnityFloatEvent m_OnHealEvent;
         [Tooltip("Unity event invoked when the object dies.")]
         [SerializeField] protected UnityVector3Vector3GameObjectEvent m_OnDeathEvent;
+        public float healAmount;
 
         public bool Invincible { get { return m_Invincible; } set { m_Invincible = value; } }
         public float TimeInvincibleAfterSpawn { get { return m_TimeInvincibleAfterSpawn; } set { m_TimeInvincibleAfterSpawn = value; } }
         public string HealthAttributeName { get { return m_HealthAttributeName; }
             set
             {
+                //healAmount = m_HealthAttribute.MaxValue -= m_HealthAttribute.Value;
                 m_HealthAttributeName = value;
                 if (Application.isPlaying) {
                     if (!string.IsNullOrEmpty(m_HealthAttributeName)) {
@@ -106,6 +109,8 @@ namespace Opsive.UltimateCharacterController.Traits
         public UnityFloatVector3Vector3GameObjectEvent OnDamageEvent { get { return m_OnDamageEvent; } set { m_OnDamageEvent = value; } }
         public UnityFloatEvent OnHealEvent { get { return m_OnHealEvent; } set { m_OnHealEvent = value; } }
         public UnityVector3Vector3GameObjectEvent OnDeathEvent { get { return m_OnDeathEvent; } set { m_OnDeathEvent = value; } }
+
+        
 
         protected GameObject m_GameObject;
         protected Transform m_Transform;
@@ -570,5 +575,6 @@ namespace Opsive.UltimateCharacterController.Traits
         {
             EventHandler.UnregisterEvent(m_GameObject, "OnRespawn", OnRespawn);
         }
+
     }
 }

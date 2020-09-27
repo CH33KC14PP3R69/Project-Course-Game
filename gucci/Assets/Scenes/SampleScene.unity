@@ -1397,7 +1397,9 @@ GameObject:
   - component: {fileID: 789303190}
   - component: {fileID: 789303189}
   - component: {fileID: 789303188}
-  m_Layer: 0
+  - component: {fileID: 789303194}
+  - component: {fileID: 789303195}
+  m_Layer: 26
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1478,6 +1480,7 @@ MonoBehaviour:
           m_StringArgument: death
           m_BoolArgument: 0
         m_CallState: 2
+  healAmount: 0
 --- !u!114 &789303189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1514,10 +1517,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.5098815
+  m_Height: 2.039526
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0.009881496}
 --- !u!23 &789303191
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1536,7 +1539,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: bad4c438c8b4db5489a03d45df089c3f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1579,6 +1582,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &789303194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789303187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f66a8312cdea7843bf2e0df3e1b5b71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InitialDamageDelay: 1
+  m_DamageAmount: 10
+  m_DamageInterval: 1
+--- !u!136 &789303195
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789303187}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 2.2360632
+  m_Height: 5.0411677
+  m_Direction: 1
+  m_Center: {x: 0.050787687, y: -0.7463777, z: -0.016033411}
 --- !u!1001 &807826802
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4422,7 +4454,9 @@ MonoBehaviour:
   m_TimeInvincibleAfterSpawn: 0
   m_HealthAttributeName: Health
   m_ShieldAttributeName: 
-  m_Hitboxes: []
+  m_Hitboxes:
+  - m_Collider: {fileID: 1998752780}
+    m_DamageMultiplier: 1
   m_MaxHitboxCollisionCount: 10
   m_SpawnedObjectsOnDeath: []
   m_DestroyedObjectsOnDeath: []
@@ -4433,7 +4467,8 @@ MonoBehaviour:
     m_Bits: 0
   m_TakeDamageAudioClipSet:
     m_Delay: 0
-    m_AudioClips: []
+    m_AudioClips:
+    - {fileID: 8300000, guid: 6c0a6b0cef1fd9f47bd6d614b2bb8d16, type: 3}
   m_HealAudioClipSet:
     m_Delay: 0
     m_AudioClips: []
@@ -4449,6 +4484,7 @@ MonoBehaviour:
   m_OnDeathEvent:
     m_PersistentCalls:
       m_Calls: []
+  healAmount: 0
   m_ApplyFallDamage: 0
   m_MinFallDamageHeight: 3
   m_MinFallDamage: 1
@@ -4478,7 +4514,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_DamagedEffectName: 
+  m_DamagedEffectName: Opsive.UltimateCharacterController.Character.Effects.PlayAudioClip
   m_DamagedEffectIndex: -1
 --- !u!114 &3086341661927731670
 MonoBehaviour:
@@ -4502,10 +4538,10 @@ MonoBehaviour:
     m_MinValue: 0
     m_MaxValue: 100
     m_Value: 100
-    m_AutoUpdateValueType: 0
-    m_AutoUpdateStartDelay: 1
-    m_AutoUpdateInterval: 0.1
-    m_AutoUpdateAmount: 0.2
+    m_AutoUpdateValueType: 2
+    m_AutoUpdateStartDelay: 5
+    m_AutoUpdateInterval: 0.2
+    m_AutoUpdateAmount: 5
 --- !u!114 &3086341661927731671
 MonoBehaviour:
   m_ObjectHideFlags: 0
