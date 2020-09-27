@@ -1439,7 +1439,7 @@ MonoBehaviour:
   m_TakeDamageAudioClipSet:
     m_Delay: 0
     m_AudioClips:
-    - {fileID: 8300000, guid: 8466dc8f6fb80b7448f44afa2fa3f54a, type: 3}
+    - {fileID: 0}
   m_HealAudioClipSet:
     m_Delay: 0
     m_AudioClips: []
@@ -1498,7 +1498,7 @@ MonoBehaviour:
       m_Default: 1
     m_Name: Health
     m_MinValue: 0
-    m_MaxValue: 1000
+    m_MaxValue: 200
     m_Value: 200
     m_AutoUpdateValueType: 0
     m_AutoUpdateStartDelay: 1
