@@ -370,6 +370,7 @@ namespace Opsive.UltimateCharacterController.Traits
                 if (m_NetworkInfo == null || m_NetworkInfo.IsLocalPlayer()) {
 #endif
                     Die(position, force, attacker);
+                Destroy(this.gameObject);
 #if ULTIMATE_CHARACTER_CONTROLLER_MULTIPLAYER
                 }
 #endif
@@ -433,6 +434,7 @@ namespace Opsive.UltimateCharacterController.Traits
             if (m_DeathLayer.value != 0) {
                 m_AliveLayer = m_GameObject.layer;
                 m_GameObject.layer = m_DeathLayer;
+                Destroy(this.gameObject);
             }
 
             // Play any take death audio. Use PlayAtPosition because the audio won't play if the GameObject is inactive.
@@ -464,6 +466,7 @@ namespace Opsive.UltimateCharacterController.Traits
         public void ImmediateDeath()
         {
             ImmediateDeath(m_Transform.position, Vector3.zero, 0);
+            Destroy(this.gameObject);
         }
 
         /// <summary>
