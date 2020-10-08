@@ -1478,6 +1478,7 @@ MonoBehaviour:
           m_StringArgument: death
           m_BoolArgument: 0
         m_CallState: 2
+  healAmount: 0
 --- !u!114 &789303189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4449,6 +4450,7 @@ MonoBehaviour:
   m_OnDeathEvent:
     m_PersistentCalls:
       m_Calls: []
+  healAmount: 0
   m_ApplyFallDamage: 0
   m_MinFallDamageHeight: 3
   m_MinFallDamage: 1
