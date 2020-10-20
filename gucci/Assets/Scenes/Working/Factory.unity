@@ -21840,6 +21840,76 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: 0.04798998
       objectReference: {fileID: 0}
+    - target: {fileID: 5705071011867662251, guid: 8ceed4d36c4769f4098eb9dc0b78b771,
+        type: 3}
+      propertyPath: m_Attributes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5705071011867662251, guid: 8ceed4d36c4769f4098eb9dc0b78b771,
+        type: 3}
+      propertyPath: m_Attributes.Array.data[1].m_States.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5705071011867662251, guid: 8ceed4d36c4769f4098eb9dc0b78b771,
+        type: 3}
+      propertyPath: m_Attributes.Array.data[1].m_States.Array.data[0].m_Name
+      value: Default
+      objectReference: {fileID: 0}
+    - target: {fileID: 5705071011867662251, guid: 8ceed4d36c4769f4098eb9dc0b78b771,
+        type: 3}
+      propertyPath: m_Attributes.Array.data[1].m_States.Array.data[0].m_Default
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5705071011867662251, guid: 8ceed4d36c4769f4098eb9dc0b78b771,
+        type: 3}
+      propertyPath: m_Attributes.Array.data[1].m_Name
+      value: New Attribute
+      objectReference: {fileID: 0}
+    - target: {fileID: 5705071011867662251, guid: 8ceed4d36c4769f4098eb9dc0b78b771,
+        type: 3}
+      propertyPath: m_Attributes.Array.data[1].m_MaxValue
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5705071011867662251, guid: 8ceed4d36c4769f4098eb9dc0b78b771,
+        type: 3}
+      propertyPath: m_Attributes.Array.data[1].m_Value
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5705071011867662251, guid: 8ceed4d36c4769f4098eb9dc0b78b771,
+        type: 3}
+      propertyPath: m_Attributes.Array.data[1].m_AutoUpdateStartDelay
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5705071011867662251, guid: 8ceed4d36c4769f4098eb9dc0b78b771,
+        type: 3}
+      propertyPath: m_Attributes.Array.data[1].m_AutoUpdateInterval
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5705071011867662251, guid: 8ceed4d36c4769f4098eb9dc0b78b771,
+        type: 3}
+      propertyPath: m_Attributes.Array.data[1].m_AutoUpdateAmount
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5705071011867662251, guid: 8ceed4d36c4769f4098eb9dc0b78b771,
+        type: 3}
+      propertyPath: m_Attributes.Array.data[1].m_AutoUpdateValueType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5705071011867662251, guid: 8ceed4d36c4769f4098eb9dc0b78b771,
+        type: 3}
+      propertyPath: m_Attributes.Array.data[0].m_AutoUpdateValueType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5705071011867662251, guid: 8ceed4d36c4769f4098eb9dc0b78b771,
+        type: 3}
+      propertyPath: m_Attributes.Array.data[0].m_AutoUpdateStartDelay
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5705071011867662251, guid: 8ceed4d36c4769f4098eb9dc0b78b771,
+        type: 3}
+      propertyPath: m_Attributes.Array.data[0].m_AutoUpdateAmount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6083231865635249466, guid: 8ceed4d36c4769f4098eb9dc0b78b771,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
