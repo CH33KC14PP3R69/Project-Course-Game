@@ -33,7 +33,7 @@ namespace Opsive.UltimateCharacterController.Demo
         /// An object has entered the trigger.
         /// </summary>
         /// <param name="other">The object that entered the trigger.</param>
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerStay(Collider other)
         {
             if (m_Health != null) {
                 return;
@@ -69,7 +69,8 @@ namespace Opsive.UltimateCharacterController.Demo
             m_Health.Damage(m_DamageAmount, m_HealthTransform.position + Random.insideUnitSphere, Vector3.zero, 0);
 
             // Apply the damage again if the object still has health remaining.
-            if (m_Health.Value > 0) {
+            if (m_Health.Value > 10)
+            {
                 m_ScheduledDamageEvent = Scheduler.Schedule(m_DamageInterval, Damage);
             }
         }
@@ -78,20 +79,20 @@ namespace Opsive.UltimateCharacterController.Demo
         /// An object has exited the trigger.
         /// </summary>
         /// <param name="other">The collider that exited the trigger.</param>
-        private void OnTriggerExit(Collider other)
-        {
-            // A main character collider is required.
-            if (!MathUtility.InLayerMask(other.gameObject.layer, 1 << LayerManager.Character)) {
-                return;
-            }
+        //private void OnTriggerExit(Collider other)
+        //{
+        //    // A main character collider is required.
+        //    if (!MathUtility.InLayerMask(other.gameObject.layer, 1 << LayerManager.Character)) {
+        //        return;
+        //    }
 
-            var health = other.GetComponentInParent<Health>();
-            if (health == m_Health) {
-                // The object has left the trigger - stop applying damage.
-                Scheduler.Cancel(m_ScheduledDamageEvent);
-                m_Health = null;
-            }
-        }
+        //    var health = other.GetComponentInParent<Health>();
+        //    if (health == m_Health) {
+        //        // The object has left the trigger - stop applying damage.
+        //        Scheduler.Cancel(m_ScheduledDamageEvent);
+        //        m_Health = null;
+        //    }
+        //}
 
         /// <summary>
         /// Draw a gizmo showing the damage zone.
